@@ -1,0 +1,18 @@
+topico 3, slide 21 - Análise de circuitos 2
+
+Vs 1 0 PWL(0 48 0 12)
+R1 1 2 6
+R2 2 0 12
+R3 2 3 4
+L1 3 0 2
+
+.tran 1ms 3
+
+.control
+    run
+    plot i(L1) 
+    plot (v(1) -V(2))/6
+    plot i(L1) (v(1) -V(2))/6
+
+.endc
+.end

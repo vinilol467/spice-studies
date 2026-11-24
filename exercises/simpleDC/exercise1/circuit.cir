@@ -1,0 +1,12 @@
+Sadiku page 31, figure 2.8
+
+V1 1 0 30
+R1 1 0 5k
+
+.control
+op
+print v(1)
+print @r1[i]
+.endc
+
+.END

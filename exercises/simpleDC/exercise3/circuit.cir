@@ -1,0 +1,17 @@
+Sadiku page 37, example 2.6
+
+V12 1 0 12
+V4  4 3 4
+E1  2 3 0 4 2
+R4  1 2 4
+R6  4 0 6
+
+
+.control 
+op
+let v0 = -v(4)
+print v0
+.endc
+
+
+.END

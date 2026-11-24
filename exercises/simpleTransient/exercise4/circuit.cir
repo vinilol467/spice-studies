@@ -1,0 +1,17 @@
+topico 5, slide 7 - Análise de circuitos 2
+Is 0 1 PWL(0 0 1u 2)
+L1 2 0 1
+C1 1 2 {1/3}
+R1 1 0 4
+
+.tran 0.1m 7
+
+.control 
+    run
+    let i_teorico = 4*exp(-time) - 4*exp(-3*time)
+    let v_teorico = 8 - 16*exp(-time) + 16*exp(-3*time)
+    plot i(L1) i_teorico
+    plot v(1) v_teorico
+    plot v(1) - v(2)
+.endc
+.end

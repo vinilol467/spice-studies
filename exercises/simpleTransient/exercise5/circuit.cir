@@ -1,0 +1,22 @@
+topico 5, slide 11 - Análise de circuitos 2
+
+I1 0 1 4 
+L1 1 0 20 
+S1 1 2 0 3 sw1
+R1 2 0 20
+C1 2 0 8m
+R2 2 3 20 
+V1 3 0 PWL(0 30 1u 0)
+
+.model sw1 SW vt = -15 vh = 0 ron = 1m roff = 1g
+.tran 1m 12
+
+.control
+    run
+    let i_teorico  =  4 + 0.0654*exp(-0.52*time) - 0.0654*exp(-11.98*time)
+    let ir_teorico = (-34*exp(-0.52*time) + 783*exp(-11.98*time))/1000
+    plot i(L1) i_teorico
+    plot v(2)/20 ir_teorico
+.endc
+.end
+

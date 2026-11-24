@@ -1,0 +1,19 @@
+Sadiku page 32, figure 2.10
+
+V1 a 0 DC 10
+I1 0 b DC 2
+R2 b 0 2
+R3 b 0 3
+R5 a b 5
+
+
+.control
+op
+print @R2[i]
+print @R3[i]
+print @R5[i]
+print v(a)
+print v(b)
+.endc
+
+.END

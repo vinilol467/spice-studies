@@ -1,0 +1,15 @@
+topico 2, slide 19 - Análise de circuitos 2
+
+*Aqui tem uma chave, mas para simplificar já descrevi o circuito pós abertura
+
+C1 1 0 0.4u IC=200
+R50 1 0 50k
+
+.tran 100u 300m UIC
+
+.control
+run 
+plot v(1)
+plot v(1)/50k 
+.endc
+.end
